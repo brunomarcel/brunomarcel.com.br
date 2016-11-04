@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bruno Marcel</title>
+    <description>Um pouco dos &quot;Web perrengues&quot; encontrados pelos desenvolvedores, tutoriais e notícias relacionadas a tecnologia web. 
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 04 Nov 2016 13:49:15 -0200</pubDate>
+    <lastBuildDate>Fri, 04 Nov 2016 13:49:15 -0200</lastBuildDate>
+    <generator>Jekyll v3.3.0</generator>
+    
+      <item>
+        <title>Porque eu uso jQuery?</title>
+        <description>&lt;p&gt;Vocês já se perguntaram isso?
+Muitos dizem que é para &lt;b&gt;facilitar a vida&lt;/b&gt;, &lt;b&gt;ganho de produtividade&lt;/b&gt; e até mesmo por &lt;b&gt;preguiça&lt;/b&gt;, mas será mesmo?&lt;/p&gt;
+
+&lt;h2&gt;Facilitar a vida?&lt;/h2&gt;
+&lt;p&gt;Já peguei vários projetos feito com jQuery que depois de muito tempo fui dar alguma manutenção ou atualizar e “deu ruim”, pelo simple fato do jQuery usado ser uma versão bem antiga, um exemplo bem comum e simples de resolver é o finado &lt;b&gt;.live()&lt;/b&gt; que foi deprecado na versão 1.7 e totalmente removido no versão 1.9, muitas vezes me peguei fazendo .replace(‘.live’, ‘.on’), funciona??? 
+&lt;b&gt;SIM, FUNCIONA&lt;/b&gt;, mas esse é só um de vários problemas que acontece, já vi também projetos com mais de duas versões de jQuery sendo usada para conseguir funcionar todos os zilhões de plugins que o site tinha, e isso funciona??? 
+É triste dizer mas… &lt;b&gt;SIM, FUNCIONA&lt;/b&gt; talvez por que o carregamento dos scripts eram assíncronos, mas mesmo assim dava um erro ou outro de compatibilidade.&lt;/p&gt;
+
+&lt;p&gt;Portanto, precisa ter organização para realmente &lt;b&gt;facilitar a vida&lt;/b&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Ganho de produtividade?&lt;/h2&gt;
+&lt;p&gt;Sim esse eu concordo, mas em partes, o que é ganho em produtividade é perdido em performance sendo que o jQuery usa o javascript(dããã) por trás, não que seja algo que implique muito no site mas, por que não cortar caminho e ir direto ao javascript?
+Da pra ganhar muita produtividade hoje em dia usando snippets para javascript e os próprios autocomplete da IDE.&lt;/p&gt;
+
+&lt;h4&gt;Posso fazer uma observação?&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/observacao.gif&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;&lt;br /&gt;
+Não estou dizendo que o jQuery é ruim, muito pelo contrário ele é &lt;b&gt;MUITO BOM&lt;/b&gt; e já me ajudou muitas e muitas vezes, eu mesmo já criei plugin para o jQuery e incentivei pessoas a usar, o que eu estou falando é sobre o título do artigo, porque eu uso jQuery??&lt;/p&gt;
+
+&lt;p&gt;Eu recentemente me fiz essa pergunta e a resposta foi &lt;b&gt;animações&lt;/b&gt;, tudo que eu fazia com o jQuery eu conseguia fazer com o javascript puro, menos as animações, na verdade até consigo, mas da muuuuito trabalho, só que hoje em dia eu não preciso tanto dessas animações, pô cara… &lt;b&gt;CSS3&lt;/b&gt;, com as animações do CSS3 eu não preciso mais me prender tanto a um framework que eu usava praticamente pra fazer isso, eu posso deixar um estilo setado em um class e simplesmente adicionar o class no elemento que eu quero que seja animado, não tem muito segredo, daí pra frente comecei a deixar um pouco de lado o jQuery e usar mais javascript puro e me aprofundar mais em animações CSS e cara, eu só ganhei com isso, aprendi muita coisa tanto de javascript que se eu soube um dia eu tive que lembrar quanto de CSS.&lt;/p&gt;
+
+&lt;p&gt;Um ponto muito forte que o jQuery tem é o ajax, é muito melhor fazer uma requisição ajax com jQuery que já tem toda a estrutura de compatibilidade pronta do que fazer com o javascript, que é preciso verificar se o navegador tem suporte a tal objeto e tal tal tal.&lt;/p&gt;
+
+&lt;p&gt;Acredito que o jQuery seja um ótimo framework, porém precisamos pensar quando usar, ele não é o &lt;b&gt;default&lt;/b&gt; do projeto, tem gente que ao começar um novo projeto já o inclui sem pensar no motivo, ele é um framework como todos os outros, ninguém sai incluido angular ou backbone em novos projetos sem pensar antes, é assim que deve ser.&lt;/p&gt;
+
+&lt;!-- Links --&gt;
+</description>
+        <pubDate>Fri, 31 Oct 2014 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/javascript/jquery/2014/10/31/porque-eu-uso-jquery.html</link>
+        <guid isPermaLink="true">http://localhost:4000/javascript/jquery/2014/10/31/porque-eu-uso-jquery.html</guid>
+        
+        
+        <category>javascript/jQuery</category>
+        
+      </item>
+    
+      <item>
+        <title>Criando componentes apenas com css</title>
+        <description>&lt;p&gt;Podemos deixar o javascript um pouco de lado na hora de criar alguns componentes como por exemplo um select customizado, existem vários plugins que fazem isso com javascript, mas por que não fazer apenas com css deixando o site mais performático e o código mais simples?&lt;/p&gt;
+
+&lt;p&gt;Existe uma técnica para isso, na verdade uma tag muito conhecida que podemos usa-la nesse caso, a tag &lt;b&gt;label&lt;/b&gt;.&lt;/p&gt;
+
+&lt;p&gt;Com a label podemos usar o atributo &lt;b&gt;for&lt;/b&gt; e um &lt;b&gt;input (checkbox ou radio)&lt;/b&gt; para manipular os eventos das animações.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/desconfiado.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Exatamente&lt;/b&gt;, podemos manipular os aventos de click usando um label, vou explicar melhor com um exemplo bem simples.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;checkbox&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content-change-color&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Aqui é o texto que trocará de cor.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;label&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;for=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content-change-color&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;clique para trocar a cor do texto.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;b&gt;CSS&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#content-change-color&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:checked&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Veja o exemplo funcionando abaixo.&lt;/p&gt;
+
+&lt;style&gt;
+#content-change-color:checked + p{
+    color: red;
+}  
+&lt;/style&gt;
+
+&lt;div class=&quot;wrapEdit&quot;&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;content-change-color&quot; /&gt;
+        &lt;p&gt;Aqui é o texto que trocará de cor.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;label for=&quot;content-change-color&quot;&gt;clique aqui para trocar a cor do texto.&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Acredito que tenha ficado claro até aqui, para quem não conhece o seletor “+” do css ele é um &lt;b&gt;pattern&lt;/b&gt; utilizado para encontrar elementos igual ao .next() do jQuery, ele pega o próximo irmão e coloca o estilo setado, com essa base já da pra entender como funciona mas vou explicar os passos.&lt;/p&gt;
+
+&lt;p&gt;Ao clicar na label ele da o check no input que tenha o mesmo id do seu atributo “for” ou no input que estiver dentro da própria label, no css colocamos um estilo pra quando o input estiver com o checked e usamos o “+” para estilizar o próximo elemento.&lt;/p&gt;
+
+&lt;p&gt;Podemos ir muito além com outros seletores como por exemplo o “~” que faz uma busca não apenas no irmão mas em todos os irmão que forem interrompidos com outras tags por exemplo, ou mesmo o “&amp;gt;” que pega o primeiro filho.&lt;/p&gt;
+
+&lt;p&gt;Para quem quizer saber mais sobre seletores css veja esse &lt;a href=&quot;http://www.w3.org/TR/CSS2/selector.html&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;É claro que esse exemplo é bem simples, vamos agora para um mais útil e completo como por exemplo um accordion.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;accordion&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;radio&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;accordion-radio&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;Título 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;Conteúdo 1&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;radio&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;accordion-radio&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;Título 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;Conteúdo 2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;label&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;radio&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;accordion-radio&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;strong&amp;gt;&lt;/span&gt;Título 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/strong&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;Conteúdo 3&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/label&amp;gt;&lt;/span&gt; 
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;b&gt;CSS&lt;/b&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&quot;Helvetica Neue&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Helvetica&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Arial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sans-serif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;font-size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;14px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+    &lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f1f1f1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ccc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;block&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;34px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;margin-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;7px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+        &lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:after&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;border&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;7px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;transparent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;border-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#282828&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;12px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
+          
+          &lt;span class=&quot;nl&quot;&gt;-webkit-transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.3s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease-out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.3s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease-out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+        &lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;34px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;absolute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;z-index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:checked&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;strong&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:after&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;4px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;15px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          
+          &lt;span class=&quot;nl&quot;&gt;-ms-transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;180deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;-webkit-transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;180deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;transform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rotate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;180deg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:checked&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;strong&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+          &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;auto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;nc&quot;&gt;.accordion&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;box-sizing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;border-box&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;border-top&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1px&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;solid&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ccc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;border-radius&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;padding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;20px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;overflow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hidden&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;-webkit-transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.3s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease-out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nl&quot;&gt;transition&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.3s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ease-out&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Veja o exemplo funcionando abaixo.&lt;/p&gt;
+
+&lt;style&gt;
+.accordion{
+  font-family: &quot;Helvetica Neue&quot;,Helvetica,Arial,sans-serif;
+  font-size: 14px;  
+}
+  
+    .accordion label{
+      background: #f1f1f1;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      display: block;
+      margin-top: 1px;
+      position: relative;
+    }
+      .accordion strong{
+        box-sizing: border-box;
+        display: block;
+        height: 34px;
+        margin-top: 1px;
+        padding: 7px;
+        position: relative;
+      }  
+        .accordion strong:after{
+          content: '';
+          border: 7px solid transparent;
+          border-top: 10px solid #282828;
+          position: absolute;
+          top: 12px;
+          right: 15px; 
+          
+          -webkit-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+        }  
+        .accordion input{
+          height: 34px;
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1;
+        }
+        .accordion input:checked + strong:after{
+          top: 4px;
+          right: 15px;
+          
+          -ms-transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+        .accordion input:checked + strong + div{
+          padding: 10px 20px;
+          height: auto;
+        }
+      .accordion div{
+        background: #fff;
+        box-sizing: border-box;
+        border-top: 1px solid #ccc;
+        border-radius: 0 0 5px 5px;
+        height: 0;
+        padding: 0 20px;
+        overflow: hidden;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+      }
+&lt;/style&gt;
+
+&lt;div class=&quot;wrapEdit&quot;&gt;
+    &lt;div class=&quot;accordion&quot;&gt;
+        &lt;label&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;accordion-radio&quot; /&gt;
+            &lt;strong&gt;Título 1&lt;/strong&gt;
+            &lt;div&gt;Conteúdo 1&lt;/div&gt;
+        &lt;/label&gt;
+        &lt;label&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;accordion-radio&quot; /&gt;
+            &lt;strong&gt;Título 2&lt;/strong&gt;
+            &lt;div&gt;Conteúdo 2&lt;/div&gt;
+        &lt;/label&gt;
+        &lt;label&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;accordion-radio&quot; /&gt;
+            &lt;strong&gt;Título 3&lt;/strong&gt;
+            &lt;div&gt;Conteúdo 3&lt;/div&gt;
+        &lt;/label&gt; 
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;É claro que esse código ficou maior, porém eu estilizei todo o accordion para mostrar uma interface bonita, mas vamos nos prender apenas a label e input, podemos trocar nosso input de &lt;b&gt;radio&lt;/b&gt; para &lt;b&gt;checkbox&lt;/b&gt; para podemos abrir mais de um ao mesmo tempo.&lt;/p&gt;
+
+&lt;p&gt;Como esse exemplo mais completo já da pra imaginar o quanto podemos fazer apenas com css não é?&lt;/p&gt;
+
+&lt;p&gt;Eu criei recentemente um snippet para sublime que faz exatamente isso, cria componentes com css puro inluíndo modal e carousel, segue o link caso tenham interesse &lt;a href=&quot;https://github.com/brunomarcel/sublime-onlycss-snippets&quot;&gt;sublime onlycss snippets&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 27 Oct 2014 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/css/2014/10/27/criando-componentes-apenas-com-css.html</link>
+        <guid isPermaLink="true">http://localhost:4000/css/2014/10/27/criando-componentes-apenas-com-css.html</guid>
+        
+        
+        <category>css</category>
+        
+      </item>
+    
+      <item>
+        <title>Criando e enviando Snippets para o install package do Sublime</title>
+        <description>&lt;p&gt;&lt;b&gt;Hoja vamos aprender como criar um snippets para o sublime e enviar para o install package.&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Primeiro, o que é snippet?&lt;/p&gt;
+
+&lt;p&gt;Snippets é aquilo que você pode já ter usado e não sabe, como por exemplo quem usa no Dreamweaver, muitas vezes você começa a escrever um certo código e ele te da uma opção de autocomplete, mas não aquele autocomplete da palavra, e sim de um bloco de código, então, snippets são blocos de códigos prontos para serem usados, agilizando suas tarefas, evitando refações e componetizando o projeto.&lt;/p&gt;
+
+&lt;p&gt;Eu mesmo já vi e participei de uns projetos onde haviam o mesmo componente em varias partes do projeto, quando fomos alterar um o outro continuou com o mesmo estilo, quando fomos ver eles tinham sido feito totalmente diferente, não que os snippets sejam a solução disso, talvez só uma organização melhor dos envolvidos no projeto já ajude, mas os snippets podem sim ajudar na organização e também na agilidade, então vamos ver como criar um.&lt;/p&gt;
+
+&lt;p&gt;Primeiro no Sublime vá ate o menu &lt;b&gt;Tools &amp;gt; New Snippet…&lt;/b&gt;, isso vai criar um arquivo assim:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;snippet&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;content&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;![CDATA[
+Hello, ${1:this} is a ${2:snippet}.
+]]&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/content&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Optional: Set a tabTrigger to define how to trigger the snippet --&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;tabTrigger&amp;gt;hello&amp;lt;/tabTrigger&amp;gt; --&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Optional: Set a scope to limit where the snippet will trigger --&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- &amp;lt;scope&amp;gt;source.python&amp;lt;/scope&amp;gt; --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/snippet&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Agora vamos altera-lo para criar um formulário de envio de e-mail simples.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;snippet&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;content&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;![CDATA[&amp;lt;!-- Meu Snippet --&amp;gt;
+&amp;lt;form action=&quot;${1:action}&quot; method=&quot;${2:POST/GET}&quot; id=&quot;snippetFormMail&quot;&amp;gt;
+	&amp;lt;label for=&quot;${3:for}&quot;&amp;gt;Nome:&amp;lt;/label&amp;gt;
+	&amp;lt;input type=&quot;text&quot; name=&quot;nome&quot; id=&quot;${3:id}&quot; &amp;gt;
+	
+	&amp;lt;label for=&quot;${4:for}&quot;&amp;gt;E-mail:&amp;lt;/label&amp;gt;
+	&amp;lt;input type=&quot;text&quot; name=&quot;mail&quot; id=&quot;${4:id}&quot; &amp;gt;
+
+	&amp;lt;label for=&quot;${5:for}&quot;&amp;gt;Nome:&amp;lt;/label&amp;gt;
+	&amp;lt;textarea name=&quot;assunto&quot; id=&quot;${5:id}&quot; cols=&quot;30&quot; rows=&quot;10&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+
+	&amp;lt;input type=&quot;submit&quot; id=&quot;enviar&quot; value=&quot;enviar&quot;&amp;gt;
+&amp;lt;/form&amp;gt;
+	]]&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/content&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;tabTrigger&amp;gt;&lt;/span&gt;form-email&lt;span class=&quot;nt&quot;&gt;&amp;lt;/tabTrigger&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;Formulario de email&lt;span class=&quot;nt&quot;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;text.html&lt;span class=&quot;nt&quot;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/snippet&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note que toda minha estrutura fica dentro da tag &lt;b&gt;content&lt;/b&gt; e não podemos apagar o &lt;b&gt;CDATA&lt;/b&gt;, dentro do content em alguns lugares temos esses códigos &lt;b&gt;${1:action}, ${2:POST/GET}…&lt;/b&gt; esse código serve para que quando criar o seu snippet o cursor vá diretamente para o que tenha o numero 1 ou o menor número, o texto a frente do número será o placeholder, e apertando o tab, o cursor vai para o próximo número automaticamente.&lt;/p&gt;
+
+&lt;p&gt;A tag &lt;b&gt;tabTrigger&lt;/b&gt; é o seu atalho para o snippet, &lt;b&gt;description&lt;/b&gt; é a descrição do seu snippet e &lt;b&gt;scope&lt;/b&gt; é o tipo do arquivo em que seu snippet vai funcionar, não é a extensão do arquivo que conta e sim a sintaxe definida pelo editor, para alterar a sintaxe aperte &lt;b&gt;Ctrl + Shift + p&lt;/b&gt; e digite a sintaxe desejada, nesse caso html.&lt;/p&gt;
+
+&lt;p&gt;Cada extensão tem o seu &lt;b&gt;scope&lt;/b&gt; diferente, por exemplo no html usamos o &lt;b&gt;text.html&lt;/b&gt;, já no css usamos o &lt;b&gt;source.css&lt;/b&gt;, javascript &lt;b&gt;source.js&lt;/b&gt; e assim vai.&lt;/p&gt;
+
+&lt;p&gt;Depois de tudo feito salve o arquivo com essa extensão &lt;b&gt;.sublime-snippet&lt;/b&gt;, se ele foi criado pelo menu &lt;b&gt;Tools &amp;gt; New Snippet…&lt;/b&gt; o caminho da pasta já esta certo, é só salvar.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Vamos testar.&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/imgs/form-mail.gif&quot; height=&quot;473&quot; width=&quot;713&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Legal funciona, agora vamos supor que queremos deixar esse snippet publico para qualquer um usar no Sublime.&lt;/p&gt;
+
+&lt;p&gt;Verifique se já existe um snippet com o mesmo propósito que o seu aqui &lt;a href=&quot;https://sublime.wbond.net/search&quot;&gt;Search page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Escolha o nome do seu snippet, o ideal é que na busca anterior já verifique se o nome escolhido já esta em uso, use CamelCase ou underscore para nomes compostos por exemplo &lt;i&gt;NomeDoMeuSnippet Autocomplete&lt;/i&gt; ou &lt;i&gt;Nome_do_meu_snippet Autocomplete&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;Escolha onde vai hospedar seu código, &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; ou &lt;a href=&quot;https://bitbucket.org/&quot;&gt;BitBucket&lt;/a&gt;, nesse exemplo vou usar o GitHub.&lt;/p&gt;
+
+&lt;p&gt;Faça um &lt;a href=&quot;https://github.com/wbond/package_control_channel&quot;&gt;fork&lt;/a&gt; do Package Control Channel. &lt;br /&gt;
+Na pasta &lt;b&gt;repository&lt;/b&gt; existem vários arquivos com uma organização alfabética, de acordo com o nome do seu snippet abra o arquivo correspondente e adiciona a seguinte estrutura.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Alignment&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/wbond/sublime_alignment&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;releases&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;s2&quot;&gt;&quot;sublime_text&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+			&lt;span class=&quot;s2&quot;&gt;&quot;details&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/wbond/sublime_alignment/tags&quot;&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Substitua as informações com as do seu snippet.
+Em details você terá que colocar a url do seu repositório, lembre de deixar bem específico do que se trata esse snippet, um framework, uma biblioteca ou qualquer outra coisa, e também como e para que funciona.&lt;/p&gt;
+
+&lt;p&gt;Em releases &amp;gt; details coloque o caminho da release do seu snippet, se subir sem, eles vão pedir, então já faça.&lt;/p&gt;
+
+&lt;p&gt;Tendo certeza que colocou o seu código em ordem alfabética envie um pull request e espere o retorno. ;D&lt;/p&gt;
+
+&lt;!-- Links --&gt;
+</description>
+        <pubDate>Tue, 07 Oct 2014 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/sublime/tutorial/2014/10/07/criando-e-enviando-snippets-para-o-install-package-do-sublime.html</link>
+        <guid isPermaLink="true">http://localhost:4000/sublime/tutorial/2014/10/07/criando-e-enviando-snippets-para-o-install-package-do-sublime.html</guid>
+        
+        
+        <category>Sublime/tutorial</category>
+        
+      </item>
+    
+      <item>
+        <title>O que é Phantomjs?</title>
+        <description>&lt;p&gt;Phantomjs é um navegador não visual baseado no webkit.&lt;/p&gt;
+
+&lt;p&gt;Navegador não visual?&lt;/p&gt;
+
+&lt;p&gt;Sim, ele é um navegador que roda no terminal e traz com ele a API do javascript onde é possível realizar testes funcionais e unitários com uso de alguns plugins como o Casperjs por exemplo, além de ter suporte a manipulação de DOM, Ajax, SVG, Canvas, JSON e os seletores CSS.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Para que serve o Phantomjs?&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Vamos pensar que trabalhamos em um projeto onde atuam 10 programadores, e vamos pensar que eles programaram sem testes e no meio do projeto surgiu uma funcionalidade nova, independente do código estar bem estruturado ou não, corre o risco de qualquer ajuste por menor que seja, alterar algo que não se espera, no caso outra funcionalidade, e isso não é legal.&lt;/p&gt;
+
+&lt;p&gt;Os testes servem para isso, quando houver qualquer alteração no código, você roda o seu teste e ele te informa se ocorreram erros ou não, se afetou outra funcionalidade, lembrando que, quando você começa a programar usando testes, você começa a estruturar melhor o código e passa a pensar melhor também, partindo do principio que, primeiro você faz todos os testes e depois você começa a programar o seu código, funciona assim:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Escreve os testes&lt;/li&gt;
+	&lt;li&gt;Roda os testes e espera o retorno das falhas previstas&lt;/li&gt;
+	&lt;li&gt;Começa a programação&lt;/li&gt;
+	&lt;li&gt;Roda novamente os testes e espera o retorno de sucesso&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;É claro que com o crescimento do projeto, provavelmente teremos que ajustar os nossos testes, talvez com novas regras e novos comportamentos.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Ta, mais o que testar?&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Os testes dependem muito do que é priorizado no projeto, não tem como decidir quais serão os testes sem ter o escopo do projeto em mãos( ou em tela rs ), mais é bom saber que temos o controle total de um navegador qualquer, como por exemplo navegar entre os links e ver qual o seu retorno, verificar a existência de seletores para comportamentos futuros, fazer testes com logins, fazer teste de requisições Ajax, como eu disse antes, temos o controle do DOM basta saber a nossa necessidade.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 22 Feb 2014 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/javascript/2014/02/22/o-que-e-phantomjs.html</link>
+        <guid isPermaLink="true">http://localhost:4000/javascript/2014/02/22/o-que-e-phantomjs.html</guid>
+        
+        
+        <category>javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>Gulp o automatizador de tarefas</title>
+        <description>&lt;p&gt;Hoje o Front-End tem varias formas de trabalhar como organizar suas ferramentas, criar o pacote de deploy e assim vai, eu tenho utilizado recentemente um automatizador de tarefas que vou apresentar pra vocês, o &lt;a href=&quot;http://gulpjs.com/&quot;&gt;Gulpjs&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;O Gulpjs é uma ferramenta que te ajuda na hora de organizar as suas tarefas, te poupando tempo e ferramentas adicionais, com ele você pode por exemplo, compilar um arquivo pré-processado, minificar arquivos, renomear arquivos, comprimir imagens, fazer um deploy entre outras tarefas(já existem mais de 200 plugins no site).&lt;/p&gt;
+
+&lt;p&gt;Um exemplo simples de como eu trabalhava antes de usar o Gulpjs é o seguinte, eu usava o SASS que dependia do ruby para ser compilado e gerar o meu css, usava ferramentas online para minificar o meu js ou alguma outra ferramenta adicional, utilizava um arquivo .bat para subir os meus arquivos no servidor local a cada ctrl+s do sublime (isso gerava um problema horrível pois muitas vezes o .bat enviava os arquivos para o servidor antes do SASS gerar o meu css) fora todo o trabalho do deploy, foi ai que comecei a pesquisar e colocar em prática ferramentas de automação, eu já conhecia o &lt;a href=&quot;http://gruntjs.com/&quot;&gt;Gruntjs&lt;/a&gt; que vi o &lt;a href=&quot;http://www.rafaellyra.com/&quot;&gt;Rafael Lyra&lt;/a&gt; falando a respeito no &lt;a href=&quot;http://devcastbrasil.com/&quot;&gt;DevCast&lt;/a&gt; mas nunca usei, e pesquisando eu encontrei o Gulpjs, vi que era o que eu precisava e que além de tudo, era muito fácil de usar.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt;Instalando e usando&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Para usa-lo você tem a única dependência do Nodejs, então se não tiver e quiser começar a usar, &lt;a href=&quot;http://nodejs.org/&quot;&gt;instale&lt;/a&gt;.
+Feito isso você vai instalar o Gulpjs pelo seu terminal do Nodejs.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Depois de tudo instalado crie na pasta do gulp um arquivo chamado gulpfile.js, é ele quem faz toda a mágica.&lt;/p&gt;
+
+&lt;p&gt;Aqui está um exemplo de gulpfile.js onde utilizei os plugins &lt;a href=&quot;https://www.npmjs.org/package/gulp-stylus/&quot;&gt;gulp-stylus&lt;/a&gt;, &lt;a href=&quot;https://www.npmjs.org/package/gulp-jade/&quot;&gt;gulp-jade&lt;/a&gt; e &lt;a href=&quot;https://www.npmjs.org/package/gulp-imagemin/&quot;&gt;gulp-imagemin&lt;/a&gt; que podem ser encontrados no &lt;a href=&quot;http://gulpjs.com/plugins/&quot;&gt;gulpjs.com/plugins&lt;/a&gt;.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;stylus&lt;/span&gt;   &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-stylus'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;jade&lt;/span&gt;     &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-jade'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;imagemin&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp-imagemin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;css&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'build/css/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;html&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'build/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;img&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'build/img/'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;watchPath&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;styl&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'styl/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;jade&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jade/'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;img&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'img/'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'stylus'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'styl/*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stylus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;css&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jade'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jade/*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;html&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'img'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'img/*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;imagemin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'watch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watchPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;styl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'stylus'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+  	&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watchPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jade&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jade'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+  	&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;watchPath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'img'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'default'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'stylus'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jade'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'img'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'watch'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esse é um exemplo bem simples porém útil, o que fizemos foi o seguinte. &lt;br /&gt;
+Nas primeiras linhas declaramos as variáveis dos plugins e as pastas que vamos usar, em seguida começamos a criar nossas tasks onde segue esse formato:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'nome_da_task'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'pasta_dos_arquivos'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;variavel_do_plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;outra_variavel_do_plugin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//pode usar quantas quiser de acordo com sua necessidade&lt;/span&gt;
+		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pasta_de_destino&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Declaramos depois a task “watch”, essa que percebe a cada modificação nos arquivos citados e chama a task para execução da tarefa, e por final a task “default” que inicializa tudo.&lt;/p&gt;
+
+&lt;p&gt;Para iniciar o gulp basta ir ate a raiz do documento gulpfile.js pelo terminal do node e digitar o comando&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esse é o comando que inicia a task “default”.&lt;/p&gt;
+
+&lt;p&gt;Para iniciar tasks únicas digite o comando&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nome_da_task&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Eu criei um template pronto para o usar o Gulp que já vem com varias configurações e estruturas de pastas, aqui esta o link para quem quiser usar ou até contribuir &lt;a href=&quot;https://github.com/brunomarcel/html5-fruitsalad&quot;&gt;HTML5 fruit salad&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 14 Feb 2014 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/css/ux/2014/02/14/gulp-o-automatizador-de-tarefas.html</link>
+        <guid isPermaLink="true">http://localhost:4000/css/ux/2014/02/14/gulp-o-automatizador-de-tarefas.html</guid>
+        
+        
+        <category>css/ux</category>
+        
+      </item>
+    
+      <item>
+        <title>Layout Fluído Vs Responsivo</title>
+        <description>&lt;p&gt;Muitas pessoas confundem os layout fluídos com os responsivos, pensam que tudo que é responsivo apenas estica e diminui, mas não é bem assim.&lt;/p&gt;
+
+&lt;p&gt;Os &lt;b&gt;layouts responsivos&lt;/b&gt; são aqueles que precisam ter uma atenção maior da área de UX, quando é analisada toda a usabilidade do site, contemplando todos os dispositivos e se possível partindo do princípio “mobile first”, onde toda a arquitetura começa sendo pensada a partir do menor dispositivo utilizável seguindo em ordem crescente e adequando as informações.&lt;br /&gt;
+O layout não segue a mesma estrutura em todos os dispositivos, muitos trocam as informações de lugar para melhor visualização, as vezes escondem e mostram a partir de um click, mudam os tamanhos das fontes, ícones e qualquer outro elemento.&lt;br /&gt;
+Para esse tipo de desenvolvimento são utilizadas as media queries css e algumas libs como &lt;a href=&quot;http://getbootstrap.com&quot;&gt;bootstrap&lt;/a&gt; e &lt;a href=&quot;http://groundworkcss.github.io/groundwork/?url=docs/home&quot;&gt;groundwork&lt;/a&gt;, eu custumo usar o &lt;a href=&quot;https://github.com/rgrove/lazyload/&quot;&gt;LazyLoad&lt;/a&gt; para carregamento de script async sendo que muitas vezes temos scripts particulares pra cada dispositivo.&lt;br /&gt;
+Nesse mesmo link do groundwork tem um bom exemplo de como funciona um layout responsivo, ele tem um menu que mostra o site de varias formas diferentes, muito interessante.&lt;/p&gt;
+
+&lt;p&gt;Os &lt;b&gt;layouts fluídos&lt;/b&gt; são aqueles que acompanham o tamanho da tela, apenas aumentando e diminuindo, não trocando estrutura e não pensando muito na usabilidade, vamos pensar em acessar um site em uma tv de 50″ e acessar o mesmo site em um celular onde esse site é visto da mesma forma pelos 2 dispositivos, é claro que ficará horrível em um dos casos se não nos dois, para construir esse tipo de layout não se pensa muito em “px” e sim em “%”, para que o elemento se estique de acordo com o pai tendo assim a sua “fluidez”, aqui tem um exemplo simples de como ele funciona &lt;a href=&quot;http://grids.heroku.com/fluid_grid?column_amount=12&quot;&gt;960.gs&lt;/a&gt;.&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Temos também os &lt;b&gt;layouts fluídos híbridos&lt;/b&gt; onde seguem o mesmo padrão dos fluídos, porém com uma limitação de largura, nesse caso utilizamos o “max-width” e “min-width” assim conseguimos ter certo controle do layout.&lt;/p&gt;
+
+&lt;p&gt;Visto os 2 exemplos e todas as suas particularidades, já da pra ter noção de como e quando usar cada tipo de layout.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 04 Feb 2014 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/css/ux/2014/02/04/layout-fluido-vs-responsivo.html</link>
+        <guid isPermaLink="true">http://localhost:4000/css/ux/2014/02/04/layout-fluido-vs-responsivo.html</guid>
+        
+        
+        <category>css/ux</category>
+        
+      </item>
+    
+      <item>
+        <title>return false, preventDefault() e stopPropagation()</title>
+        <description>&lt;p&gt;Muitas pessoas usam &lt;b&gt;return false;&lt;/b&gt; e &lt;b&gt;e.preventDefault()&lt;/b&gt; mas não sabem para que servem, usam por instinto mesmo, sendo assim, como escolher qual usar?&lt;/p&gt;
+
+&lt;p&gt;O &lt;b&gt;e.preventDefault()&lt;/b&gt; é mais usado no elemento “a” para cancelar o direcionamento do link, alguns devs ainda usam o “javascript:;” dentro do atributo “href”, eu não acho isso uma boa prática, não o recomendo.&lt;/p&gt;
+
+&lt;p&gt;Além disso o  &lt;b&gt;e.preventDefault()&lt;/b&gt; mantém o que chamam de borbulhamento , que na verdade é “propagar o evento dos elementos com nível hierárquico maior”, ou seja, ele herda os eventos e dispara ao terminar os seus próprios. Para que não sejam disparados esses eventos herdados usamos o &lt;b&gt;e.stopPropagation()&lt;/b&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ao usar o return false; você dispara os 2 eventos acima citados sem perceber, sendo assim o &lt;b&gt;return: false;&lt;/b&gt; cancela o direcionamento do link, o borbulhamento e todo o código que estiver depois dele.&lt;/p&gt;
+
+&lt;p&gt;Aqui um exemplo na prática:&lt;/p&gt;
+
+&lt;p&gt;Temos o seguinte html:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Clique nos &quot;spans&quot;.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;preventDefault&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;com e.preventDefault()&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stopPropagation&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;com e.stopPropagation()&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;returnFalse&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;com return false&lt;span class=&quot;nt&quot;&gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;E o seguinte javascript:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Você clicou no link'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#preventDefault'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Você clicou no span com e.preventDefault()'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#stopPropagation'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preventDefault&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;stopPropagation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Você clicou no span com e.stopPropagation()'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#returnFalse'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Você clicou no span com return false'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'esse alert nunca será disparado.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Note que ao clicarmos no span com id=”preventDefault”, ao terminar seu bloco de código o evento do pai dele será disparado, já no span com id=”stopPropagation” o evento do pai não será disparado assim como no span com id=”returnFalse”, porém ele não dispara o último alert() que esta depois do return false;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://codepen.io/brunomarcel/pen/csAFn&quot;&gt;Veja um exemplo funcionando.&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 21 Jan 2014 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/javascript/2014/01/21/return-false-preventdefault-e-stoppropagation.html</link>
+        <guid isPermaLink="true">http://localhost:4000/javascript/2014/01/21/return-false-preventdefault-e-stoppropagation.html</guid>
+        
+        
+        <category>javascript</category>
+        
+      </item>
+    
+      <item>
+        <title>Carousel de imagens com controle parametrizado</title>
+        <description>&lt;p&gt;Muitas e muitas vezes eu precisei de um plugin para carousel de imagens, e muitos dos plugins resolveram o meu problema, porém, o último que precisei era para um site responsivo com 5 resoluções diferentes mais a orientação da tela, testei alguns plugins e nenhum trabalhava como eu precisava, decidi então criar o meu, mesmo sabendo que já existem muitos.&lt;/p&gt;
+
+&lt;p&gt;Comecei separando o que eu precisava:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;Quantidade de imagens visíveis&lt;/li&gt;
+	&lt;li&gt;Espaçamento entre as imagens&lt;/li&gt;
+	&lt;li&gt;Quantidade de imagem a ser animada por vez&lt;/li&gt;
+	&lt;li&gt;liberdade para colocar imagem ou texto nas setas do carousel&lt;/li&gt;
+	&lt;li&gt;Mais de um carousel funcionando na mesma página&lt;/li&gt;
+	&lt;li&gt;E um evento de “reload” para refazer todos os parâmetros assim que necessário&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Depois disso foi só codificar, aqui vai um passo a passo do plugin( é bem fácil de usar ).&lt;/p&gt;
+
+&lt;p&gt;Primeiro vamos incluir o script.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;...
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://code.jquery.com/jquery-2.0.3.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;libs/bmcarousel.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Seu html vai seguir a estrutura básica de uma “ul” com um class.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ulCarousel&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;imgs/img-1.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;imgs/img-2.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;imgs/img-3.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;imgs/img-4.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;imgs/img-5.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;imgs/img-6.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;imgs/img-7.jpg&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/ul&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Para o css o essencial é esse código.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.ulCarousel&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;li&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;/* ou display: inline; */&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;list-style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;OBS: Esse css é apenas para o carousel funcionar, o estilo em si é você que vai criar.&lt;/p&gt;
+
+&lt;p&gt;E por último a chamada do plugin.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;bmcarousel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;container&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.ulCarousel'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;     
+        &lt;span class=&quot;na&quot;&gt;visible&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                   
+        &lt;span class=&quot;na&quot;&gt;space&lt;/span&gt;       &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;                  
+        &lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'prev'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;              
+        &lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;       &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'next'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;              
+        &lt;span class=&quot;na&quot;&gt;qtdScroll&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;                    
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Esse parâmetros são os controles do carousel onde:&lt;/p&gt;
+
+&lt;ul&gt;
+	&lt;li&gt;container é o seletor do carousel&lt;/li&gt;
+	&lt;li&gt;visible é a quantidade de imagens visíveis na tela&lt;/li&gt;
+	&lt;li&gt;space é o espaço entre as imagens (margin: x)&lt;/li&gt;
+	&lt;li&gt;left/right são as setas onde você pode colocar tanto um texto quanto uma tag “img”&lt;/li&gt;
+	&lt;li&gt;qtdScroll é a quantidade de imagem a ser animada por vez&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Acesse a página do &lt;a href=&quot;https://github.com/brunomarcel/bmcarousel&quot;&gt;github&lt;/a&gt; para ver o evento reload, uso de mais de um carousel na mesma página e para contribui se quiser.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 18 Jan 2014 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/javascript/2014/01/18/carousel-de-imagens-com-controle-parametrizado.html</link>
+        <guid isPermaLink="true">http://localhost:4000/javascript/2014/01/18/carousel-de-imagens-com-controle-parametrizado.html</guid>
+        
+        
+        <category>javascript</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,13 @@
+# Site settings
+title: Bruno Marcel
+email: ola@debugtrue.com.br
+description: > # this means to ignore newlines until "baseurl:"
+  Um pouco dos "Web perrengues" encontrados pelos desenvolvedores, tutoriais e notícias relacionadas a tecnologia web. 
+baseurl: "" # the subpath of your site, e.g. /blog/
+imgs_folder: "/assets/imgs/"
+url: "http://brunomarcel.com.br/" # the base hostname & protocol for your site
+twitter_username: brunomarcel_
+github_username:  brunomarcel
+
+# Build settings
+markdown: kramdown
