@@ -4,10 +4,10 @@
     <title>Bruno Marcel</title>
     <description>Um pouco dos &quot;Web perrengues&quot; encontrados pelos desenvolvedores, tutoriais e notícias relacionadas a tecnologia web. 
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 08 Nov 2016 20:51:51 -0200</pubDate>
-    <lastBuildDate>Tue, 08 Nov 2016 20:51:51 -0200</lastBuildDate>
+    <link>http://brunomarcel.com.br//</link>
+    <atom:link href="http://brunomarcel.com.br//feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 08 Nov 2016 21:22:10 -0200</pubDate>
+    <lastBuildDate>Tue, 08 Nov 2016 21:22:10 -0200</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -36,8 +36,8 @@ OBS: O projeto usava o &lt;a href=&quot;https://github.com/reflux/refluxjs&quot;
 
 </description>
         <pubDate>Tue, 08 Nov 2016 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/javascript/react/2016/11/08/removendo-react-elements-da-DOM.html</link>
-        <guid isPermaLink="true">http://localhost:4000/javascript/react/2016/11/08/removendo-react-elements-da-DOM.html</guid>
+        <link>http://brunomarcel.com.br//javascript/react/2016/11/08/removendo-react-elements-da-DOM.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//javascript/react/2016/11/08/removendo-react-elements-da-DOM.html</guid>
         
         
         <category>javascript/React</category>
@@ -73,8 +73,8 @@ Não estou dizendo que o jQuery é ruim, muito pelo contrário ele é &lt;b&gt;M
 &lt;!-- Links --&gt;
 </description>
         <pubDate>Fri, 31 Oct 2014 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/javascript/jquery/2014/10/31/porque-eu-uso-jquery.html</link>
-        <guid isPermaLink="true">http://localhost:4000/javascript/jquery/2014/10/31/porque-eu-uso-jquery.html</guid>
+        <link>http://brunomarcel.com.br//javascript/jquery/2014/10/31/porque-eu-uso-jquery.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//javascript/jquery/2014/10/31/porque-eu-uso-jquery.html</guid>
         
         
         <category>javascript/jQuery</category>
@@ -320,8 +320,8 @@ Não estou dizendo que o jQuery é ruim, muito pelo contrário ele é &lt;b&gt;M
 
 </description>
         <pubDate>Mon, 27 Oct 2014 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/css/2014/10/27/criando-componentes-apenas-com-css.html</link>
-        <guid isPermaLink="true">http://localhost:4000/css/2014/10/27/criando-componentes-apenas-com-css.html</guid>
+        <link>http://brunomarcel.com.br//css/2014/10/27/criando-componentes-apenas-com-css.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//css/2014/10/27/criando-componentes-apenas-com-css.html</guid>
         
         
         <category>css</category>
@@ -416,8 +416,8 @@ Em details você terá que colocar a url do seu repositório, lembre de deixar b
 &lt;!-- Links --&gt;
 </description>
         <pubDate>Tue, 07 Oct 2014 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/sublime/tutorial/2014/10/07/criando-e-enviando-snippets-para-o-install-package-do-sublime.html</link>
-        <guid isPermaLink="true">http://localhost:4000/sublime/tutorial/2014/10/07/criando-e-enviando-snippets-para-o-install-package-do-sublime.html</guid>
+        <link>http://brunomarcel.com.br//sublime/tutorial/2014/10/07/criando-e-enviando-snippets-para-o-install-package-do-sublime.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//sublime/tutorial/2014/10/07/criando-e-enviando-snippets-para-o-install-package-do-sublime.html</guid>
         
         
         <category>Sublime/tutorial</category>
@@ -452,8 +452,8 @@ Em details você terá que colocar a url do seu repositório, lembre de deixar b
 &lt;p&gt;Os testes dependem muito do que é priorizado no projeto, não tem como decidir quais serão os testes sem ter o escopo do projeto em mãos( ou em tela rs ), mais é bom saber que temos o controle total de um navegador qualquer, como por exemplo navegar entre os links e ver qual o seu retorno, verificar a existência de seletores para comportamentos futuros, fazer testes com logins, fazer teste de requisições Ajax, como eu disse antes, temos o controle do DOM basta saber a nossa necessidade.&lt;/p&gt;
 </description>
         <pubDate>Sat, 22 Feb 2014 00:00:00 -0300</pubDate>
-        <link>http://localhost:4000/javascript/2014/02/22/o-que-e-phantomjs.html</link>
-        <guid isPermaLink="true">http://localhost:4000/javascript/2014/02/22/o-que-e-phantomjs.html</guid>
+        <link>http://brunomarcel.com.br//javascript/2014/02/22/o-que-e-phantomjs.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//javascript/2014/02/22/o-que-e-phantomjs.html</guid>
         
         
         <category>javascript</category>
@@ -547,8 +547,8 @@ Nas primeiras linhas declaramos as variáveis dos plugins e as pastas que vamos 
 
 </description>
         <pubDate>Fri, 14 Feb 2014 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/css/ux/2014/02/14/gulp-o-automatizador-de-tarefas.html</link>
-        <guid isPermaLink="true">http://localhost:4000/css/ux/2014/02/14/gulp-o-automatizador-de-tarefas.html</guid>
+        <link>http://brunomarcel.com.br//css/ux/2014/02/14/gulp-o-automatizador-de-tarefas.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//css/ux/2014/02/14/gulp-o-automatizador-de-tarefas.html</guid>
         
         
         <category>css/ux</category>
@@ -572,8 +572,8 @@ Nesse mesmo link do groundwork tem um bom exemplo de como funciona um layout res
 
 </description>
         <pubDate>Tue, 04 Feb 2014 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/css/ux/2014/02/04/layout-fluido-vs-responsivo.html</link>
-        <guid isPermaLink="true">http://localhost:4000/css/ux/2014/02/04/layout-fluido-vs-responsivo.html</guid>
+        <link>http://brunomarcel.com.br//css/ux/2014/02/04/layout-fluido-vs-responsivo.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//css/ux/2014/02/04/layout-fluido-vs-responsivo.html</guid>
         
         
         <category>css/ux</category>
@@ -634,8 +634,8 @@ Nesse mesmo link do groundwork tem um bom exemplo de como funciona um layout res
 
 </description>
         <pubDate>Tue, 21 Jan 2014 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/javascript/2014/01/21/return-false-preventdefault-e-stoppropagation.html</link>
-        <guid isPermaLink="true">http://localhost:4000/javascript/2014/01/21/return-false-preventdefault-e-stoppropagation.html</guid>
+        <link>http://brunomarcel.com.br//javascript/2014/01/21/return-false-preventdefault-e-stoppropagation.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//javascript/2014/01/21/return-false-preventdefault-e-stoppropagation.html</guid>
         
         
         <category>javascript</category>
@@ -715,8 +715,8 @@ Nesse mesmo link do groundwork tem um bom exemplo de como funciona um layout res
 
 </description>
         <pubDate>Sat, 18 Jan 2014 00:00:00 -0200</pubDate>
-        <link>http://localhost:4000/javascript/2014/01/18/carousel-de-imagens-com-controle-parametrizado.html</link>
-        <guid isPermaLink="true">http://localhost:4000/javascript/2014/01/18/carousel-de-imagens-com-controle-parametrizado.html</guid>
+        <link>http://brunomarcel.com.br//javascript/2014/01/18/carousel-de-imagens-com-controle-parametrizado.html</link>
+        <guid isPermaLink="true">http://brunomarcel.com.br//javascript/2014/01/18/carousel-de-imagens-com-controle-parametrizado.html</guid>
         
         
         <category>javascript</category>
